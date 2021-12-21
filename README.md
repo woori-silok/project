@@ -20,23 +20,23 @@
 
 ### 오늘의 회의
 
-![오늘의 회의](./오늘의회의.jpg)
+![오늘의 회의](./images/오늘의회의.jpg)
 
 ### 회의실 예약
 
-![회의실 예약](./시연.gif)
+![회의실 예약](./images/시연.gif)
 
 ### 회의록
 
-![회의록](./회의록.jpg)
+![회의록](./images/회의록.jpg)
 
 ### 참여 중인 회의
 
-![참여 중인 회의](./참여중인회의.jpg)
+![참여 중인 회의](./images/참여중인회의.jpg)
 
 ### 내 회의
 
-![내 회의](./내회의.jpg)
+![내 회의](./images/내회의.jpg)
 
 ## 설치 및 실행 방법
 
@@ -53,21 +53,25 @@ $ npm start
 
 - 백엔드
 
-```
+  - Windows
 
+```
+./gradlew bootJar
+cd build/libs
+java -jar springboot-basic-0.0.1-SNAPSHOT.jar
 ```
 
 ## 서비스 아키텍처
 
-![아키텍처](./아키텍처.png)
+![아키텍처](./images/아키텍처.png)
 S2, Spring Security, load balance, github action 어쩌구 저쩌구...
 
 ## ERD
+![image](https://user-images.githubusercontent.com/46465928/146958494-6dc4aa70-25b3-44cf-96fe-c337f0b92231.png)
 
 ## 개발 환경
 
 ### 프론트엔드
-
 - Node.js
 - Typescript
 - React
@@ -75,10 +79,22 @@ S2, Spring Security, load balance, github action 어쩌구 저쩌구...
 - Emotion
 
 ### 백엔드
-
 - Java
+- Spring Boot
+- Spring Data JPA
+- Spring Security
+- AWS RDS MySQL
+- AWS BeanStalk
+- AWS S3
 
 ### CI/CD
+- Github Actions
+
+### 커뮤니케이션
+- Slack
+- Github Project
+- SwaggerHub
+- Google Meet
 
 ## 팀원 역할
 
@@ -91,5 +107,15 @@ S2, Spring Security, load balance, github action 어쩌구 저쩌구...
   - tui-date-picker를 사용하여 회의 예약 페이지 구현
   - tui-editor를 사용하여 회의록 페이지 구현
   - 참여 중인 회의 페이지, 파일 업로드 구현
-- 인영은
+- 인영은 (Backend)
+  - JWT 인증 사용한 로그인	
+  - 내가 참여한 회의 / 참여 예정 회의 확인
+  - 회의실 조회
+  - 회의실 상세 정보 조회
+  - 회의실 예약 현황 조회
+  - 회의실 예약
+  - 회의록 리스트 - 주제별로 필터링
+  - 회의록 작성
+  - 회의록 공유
+  - 파일 업로드 / 다운로드
 - 황민주
