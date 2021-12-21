@@ -1,4 +1,7 @@
-# Woori-Silok
+<p align="center">
+  <img src = "./woorisilok.svg">
+  <h1 align="center">Woori Silok</h1>
+</p>
 
 > 회의실 예약과 회의록 작성을 한번에!
 
@@ -6,9 +9,9 @@
 
 우리실록을 통해 두 가지 기능을 한 곳에서 수행해보세요.
 
-## 주요 기능(서비스 화면과 합쳐서 설명해도 될듯)
+## 주요 기능
 
-- 오늘 예정된 회의 한눈에 보기
+- 오늘 예정된 회의 한 눈에 보기
 - 간단한 회의 예약
 - MarkDown 기능이 가능한 글쓰기
 - 회의록 공유 및 공유 대상에게 메일로 알리기
@@ -65,17 +68,28 @@ S2, Spring Security, load balance, github action 어쩌구 저쩌구...
 
 ### 프론트엔드
 
+- node
 - Typescript
-- React.js
+- React
 - Material-UI
-- Emotion.js
+- Emotion
 
 ### 백엔드
 
 - Java
 
-### 데브 옵스 ? CI/CD
+### CI/CD
 
-## 팀원
+## 팀원 역할
 
-## 라이센스(?)
+- 이병현
+- 이재석
+  - Figma를 활용하여 와이어프레임 설계
+  - 로그인 페이지 구현
+  - 오늘의 회의 페이지 구현
+  - tui-date-picker를 사용하여 회의 예약 페이지 구현
+  - tui-editor를 사용하여 회의록 페이지 구현
+  - 참여 중인 회의 파일 업로드 구현
+  - 프론트엔드 로그인 검증 구현
+- 인영은
+- 황민주
