@@ -3,7 +3,7 @@
   <h1 align="center">Woori Silok</h1>
 </p>
 
-> 회의실 예약과 회의록 작성을 한번에!
+## 회의실 예약과 회의록 작성을 한번에!
 
 회의실 예약과 회의록 작성을 별도의 어플에서 하느라 귀찮으셨을 분들을 위한 서비스입니다.
 
@@ -68,7 +68,7 @@ S2, Spring Security, load balance, github action 어쩌구 저쩌구...
 
 ### 프론트엔드
 
-- node
+- Node.js
 - Typescript
 - React
 - Material-UI
@@ -85,11 +85,11 @@ S2, Spring Security, load balance, github action 어쩌구 저쩌구...
 - 이병현
 - 이재석
   - Figma를 활용하여 와이어프레임 설계
+  - 프론트엔드 로그인 검증 구현
   - 로그인 페이지 구현
   - 오늘의 회의 페이지 구현
   - tui-date-picker를 사용하여 회의 예약 페이지 구현
   - tui-editor를 사용하여 회의록 페이지 구현
-  - 참여 중인 회의 파일 업로드 구현
-  - 프론트엔드 로그인 검증 구현
+  - 참여 중인 회의 페이지, 파일 업로드 구현
 - 인영은
 - 황민주
