@@ -24,7 +24,7 @@
 
 ### 회의실 예약
 
-![image](https://user-images.githubusercontent.com/46465928/146960532-228c4511-c3b4-43cb-a499-372fcb3fd63c.png)
+![시연](./시연.gif)
 
 ### 회의록
 
@@ -57,15 +57,21 @@ $ npm start
   - Windows
 
 ```
-./gradlew bootJar
-cd build/libs
-java -jar springboot-basic-0.0.1-SNAPSHOT.jar
+$ ./gradlew bootJar
+$ cd build/libs
+$ java -jar springboot-basic-0.0.1-SNAPSHOT.jar
 ```
 
 ## 서비스 아키텍처
 
-![아키텍처](./images/아키텍처.png)
-S2, Spring Security, load balance, github action 어쩌구 저쩌구...
+![image](https://user-images.githubusercontent.com/46465928/146960972-e9a58a37-e6e6-4741-b558-e7c74e8d2b9d.png)
+- 프론트엔드
+  - Github에서 push한 소스코드는 Github Actions를 통해 AWS S3에 업로드 됩니다.
+  - CloudFront를 통해 웹서버의 부담을 경감시키고, 전세계의 사용자를 대상으로 고속으로 컨텐츠를 제공합니다
+- 백엔드
+  - Github에 배포한 소스코드는 Github Actions를 통해 AWS ElasticBeanstalk에 디플로이 됩니다.
+  - 회의록 첨부파일은 AWS S3에 업로드됩니다.
+  - Load Banlancer를 사용함으로써 무중단 배포를 가능하게 합니다.
 
 ## ERD
 ![image](https://user-images.githubusercontent.com/46465928/146958494-6dc4aa70-25b3-44cf-96fe-c337f0b92231.png)
