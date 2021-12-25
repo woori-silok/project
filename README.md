@@ -66,11 +66,11 @@ $ java -jar springboot-basic-0.0.1-SNAPSHOT.jar
 
 ![image](https://user-images.githubusercontent.com/46465928/146960972-e9a58a37-e6e6-4741-b558-e7c74e8d2b9d.png)
 - 프론트엔드
-  - Github에서 push한 소스코드는 Github Actions를 통해 AWS S3에 업로드 됩니다.
-  - CloudFront를 통해 웹서버의 부담을 경감시키고, 전세계의 사용자를 대상으로 고속으로 컨텐츠를 제공합니다
+  - Github에서 push한 소스코드는 GitHub Actions를 통해 Amazon S3에 업로드 됩니다.
+  - Amazon CloudFront를 통해 웹서버의 부담을 경감시키고, 전세계의 사용자를 대상으로 고속으로 컨텐츠를 제공합니다
 - 백엔드
-  - Github에 배포한 소스코드는 Github Actions를 통해 AWS ElasticBeanstalk에 디플로이 됩니다.
-  - 회의록 첨부파일은 AWS S3에 업로드됩니다.
+  - Github에 배포한 소스코드는 GitHub Actions를 통해 AWS ElasticBeanstalk에 디플로이 됩니다.
+  - 회의록 첨부파일은 Amazon S3에 업로드됩니다.
   - Load Banlancer를 사용함으로써 무중단 배포를 가능하게 합니다.
 
 ## ERD
@@ -79,20 +79,21 @@ $ java -jar springboot-basic-0.0.1-SNAPSHOT.jar
 ## 개발 환경
 
 ### 프론트엔드
-- Node.js
 - Typescript
 - React
-- Material-UI
+- MUI
 - Emotion
+- Amazon S3
+- Amazon CloudFront
 
 ### 백엔드
 - Java
 - Spring Boot
 - Spring Data JPA
 - Spring Security
-- AWS RDS MySQL
+- Amazon RDS MySQL
 - AWS BeanStalk
-- AWS S3
+- Amazon S3
 
 ### CI/CD
 - Github Actions
@@ -106,6 +107,14 @@ $ java -jar springboot-basic-0.0.1-SNAPSHOT.jar
 ## 팀원 역할
 
 - 이병현
+  - Figma를 활용하여 와이어프레임 설계
+  - 프론트엔드 프로젝트 세팅
+  - 참여 중인 회의 페이지 에디터 구현
+  - 내 회의 페이지의 달력 기능 구현
+  - AWS CDK를 이용한 Amazon S3, Amazon CloudFront 리소스 정의 (iac)
+  - GitHub Actions를 이용하여 CI/CD 설정 (Amazon S3 업로드, Amazon CloudFront invalidation)
+  - 도메인 설정 (Amazon Route53) [woorisilok.ga](https://woorisilok.ga/)
+  - 백엔드에서 사용중인 ALB에 ACM을 붙여 백엔드 엔드포인트에 https 추가
 - 이재석
   - Figma를 활용하여 와이어프레임 설계
   - 프론트엔드 로그인 검증 구현
