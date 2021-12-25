@@ -96,11 +96,11 @@ $ java -jar springboot-basic-0.0.1-SNAPSHOT.jar
 - Amazon S3
 
 ### CI/CD
-- Github Actions
+- GitHub Actions
 
 ### 커뮤니케이션
 - Slack
-- Github Project
+- GitHub Project
 - SwaggerHub
 - Google Meet
 
