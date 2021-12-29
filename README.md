@@ -20,6 +20,7 @@
 
 ### 오늘의 회의
 
+<<<<<<< HEAD
 ![오늘의 회의](./image/오늘의회의.jpg)
 
 ### 회의실 예약
@@ -37,6 +38,26 @@
 ### 내 회의
 
 ![내 회의](./image/내회의.jpg)
+=======
+![image](https://user-images.githubusercontent.com/46465928/146960574-5d303707-298d-4089-bdca-2a4b595c4667.png)
+
+### 회의실 예약
+
+![시연](./시연.gif)
+
+### 회의록
+
+![image](https://user-images.githubusercontent.com/46465928/146960486-2c1c172c-a95a-4ac7-ab6a-8eef4f52d016.png)
+
+### 참여 중인 회의
+
+![image](https://user-images.githubusercontent.com/46465928/146960449-1078a4de-f2a0-42fc-8690-641e483f159d.png)
+
+### 내 회의
+
+![image](https://user-images.githubusercontent.com/46465928/146960402-78e2f892-4219-4e64-8b19-7b3d7bc36c40.png)
+
+>>>>>>> 4e337e4f50546602adcc30301f08e2541bb6286e
 
 ## 설치 및 실행 방법
 
@@ -53,36 +74,67 @@ $ npm start
 
 - 백엔드
 
-```
+  - Windows
 
+```
+$ ./gradlew bootJar
+$ cd build/libs
+$ java -jar springboot-basic-0.0.1-SNAPSHOT.jar
 ```
 
 ## 서비스 아키텍처
 
-![아키텍처](./아키텍처.png)
-S2, Spring Security, load balance, github action 어쩌구 저쩌구...
+![image](https://user-images.githubusercontent.com/46465928/146960972-e9a58a37-e6e6-4741-b558-e7c74e8d2b9d.png)
+- 프론트엔드
+  - Github에서 push한 소스코드는 GitHub Actions를 통해 Amazon S3에 업로드 됩니다.
+  - Amazon CloudFront를 통해 웹서버의 부담을 경감시키고, 전세계의 사용자를 대상으로 고속으로 컨텐츠를 제공합니다
+- 백엔드
+  - Github에 배포한 소스코드는 GitHub Actions를 통해 AWS ElasticBeanstalk에 디플로이 됩니다.
+  - 회의록 첨부파일은 Amazon S3에 업로드됩니다.
+  - Load Banlancer를 사용함으로써 무중단 배포를 가능하게 합니다.
 
 ## ERD
+![image](https://user-images.githubusercontent.com/46465928/146958494-6dc4aa70-25b3-44cf-96fe-c337f0b92231.png)
 
 ## 개발 환경
 
 ### 프론트엔드
-
-- Node.js
 - Typescript
 - React
-- Material-UI
+- MUI
 - Emotion
+- Amazon S3
+- Amazon CloudFront
 
 ### 백엔드
-
 - Java
+- Spring Boot
+- Spring Data JPA
+- Spring Security
+- Amazon RDS MySQL
+- AWS BeanStalk
+- Amazon S3
 
 ### CI/CD
+- GitHub Actions
+
+### 커뮤니케이션
+- Slack
+- GitHub Project
+- SwaggerHub
+- Google Meet
 
 ## 팀원 역할
 
 - 이병현
+  - Figma를 활용하여 와이어프레임 설계
+  - 프론트엔드 프로젝트 세팅
+  - 참여 중인 회의 페이지 에디터 구현
+  - 내 회의 페이지의 달력 기능 구현
+  - AWS CDK를 이용한 Amazon S3, Amazon CloudFront 리소스 정의 (iac)
+  - GitHub Actions를 이용하여 CI/CD 설정 (Amazon S3 업로드, Amazon CloudFront invalidation)
+  - 도메인 설정 (Amazon Route53) [woorisilok.ga](https://woorisilok.ga/)
+  - 백엔드에서 사용중인 ALB에 ACM을 붙여 백엔드 엔드포인트에 https 추가
 - 이재석
   - Figma를 활용하여 와이어프레임 설계
   - 프론트엔드 로그인 검증 구현
@@ -91,5 +143,15 @@ S2, Spring Security, load balance, github action 어쩌구 저쩌구...
   - tui-date-picker를 사용하여 회의 예약 페이지 구현
   - tui-editor를 사용하여 회의록 페이지 구현
   - 참여 중인 회의 페이지, 파일 업로드 구현
-- 인영은
+- 인영은 (Backend)
+  - JWT 인증 사용한 로그인	
+  - 내가 참여한 회의 / 참여 예정 회의 확인
+  - 회의실 조회
+  - 회의실 상세 정보 조회
+  - 회의실 예약 현황 조회
+  - 회의실 예약
+  - 회의록 리스트 - 주제별로 필터링
+  - 회의록 작성
+  - 회의록 공유
+  - 파일 업로드 / 다운로드
 - 황민주
