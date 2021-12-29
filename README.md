@@ -20,7 +20,6 @@
 
 ### 오늘의 회의
 
-<<<<<<< HEAD
 ![오늘의 회의](./image/오늘의회의.jpg)
 
 ### 회의실 예약
@@ -38,26 +37,6 @@
 ### 내 회의
 
 ![내 회의](./image/내회의.jpg)
-=======
-![image](https://user-images.githubusercontent.com/46465928/146960574-5d303707-298d-4089-bdca-2a4b595c4667.png)
-
-### 회의실 예약
-
-![시연](./시연.gif)
-
-### 회의록
-
-![image](https://user-images.githubusercontent.com/46465928/146960486-2c1c172c-a95a-4ac7-ab6a-8eef4f52d016.png)
-
-### 참여 중인 회의
-
-![image](https://user-images.githubusercontent.com/46465928/146960449-1078a4de-f2a0-42fc-8690-641e483f159d.png)
-
-### 내 회의
-
-![image](https://user-images.githubusercontent.com/46465928/146960402-78e2f892-4219-4e64-8b19-7b3d7bc36c40.png)
-
->>>>>>> 4e337e4f50546602adcc30301f08e2541bb6286e
 
 ## 설치 및 실행 방법
 
