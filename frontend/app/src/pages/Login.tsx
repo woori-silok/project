@@ -33,22 +33,18 @@ const Login: React.FC = () => {
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // const isValid = await useLoginValidate(email, password);
-    const isValid = true;
+    const isValid = await useLoginValidate(email, password);
     if (isValid) {
       try {
         const response = await axios.post('/login', {
-          email: 'ljs981120@gmail.com',
-          password: 'admin',
+          email,
+          password,
         });
-        const { accessToken, refreshToken } = response.data;
-        axios.defaults.headers.common[
-          'Authorization'
-        ] = `Bearer ${accessToken}`;
-        localStorage.setItem('woori-silok-jwt', accessToken);
-        localStorage.setItem('refresh-token', refreshToken);
+
+        const token = response.data.token;
+        axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+        localStorage.setItem('woori-silok-jwt', token);
         setStatus({ ...status, loading: false, error: null });
-        console.log(refreshToken);
       } catch (error) {
         if (error.response.status == 400 || error.response.status == 401) {
           setStatus({

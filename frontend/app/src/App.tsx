@@ -8,23 +8,11 @@ import OnGoingMeeting from './pages/OnGoingMeeting';
 import MyMeeting from './pages/MyMeeting';
 import Login from './pages/Login';
 import SecureRoute from './components/route/SecureRoute';
-import { CircularProgress, Box } from '@mui/material';
-
 import useToken from './hooks/useToken';
 
 const App: React.FC = () => {
   const token = useToken();
   axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-
-  // if (loading) {
-  //   return <Box textAlign="center">{loading && <CircularProgress />}</Box>;
-  // }
-
-  // if (error) {
-  //   console.log(error);
-  //   localStorage.removeItem('woori-silok-jwt');
-  //   localStorage.removeItem('refresh-token');
-  // }
 
   return (
     <BrowserRouter>

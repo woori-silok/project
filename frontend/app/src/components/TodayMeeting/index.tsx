@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import styled from '@emotion/styled';
 import Schedule from './Schedule';
 import { Reservation } from '../../interfaces';
-import useCheckToken from '../../hooks/useCheckToken';
 
 const ContentsWrapper = styled(Box)`
   display: flex;
@@ -49,7 +48,6 @@ const TodayMeeting: React.FC<TodayMeetingProps> = (props) => {
 
   return (
     <ContentsWrapper>
-      <button onClick={useCheckToken}>test</button>
       <Box>
         {ongoingIndex >= 0 ? (
           <Typography align="center" variant="h4">
