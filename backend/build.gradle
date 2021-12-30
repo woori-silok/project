@@ -1,0 +1,71 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.2'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'com.woori_silok'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // spring
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // database
+    runtimeOnly 'mysql:mysql-connector-java'
+    //runtimeOnly 'com.h2database:h2'
+    implementation 'org.flywaydb:flyway-core:6.4.2'
+
+    //devtools
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    // swagger
+    implementation "io.springfox:springfox-boot-starter:3.0.0"
+    // lombok
+    implementation 'org.projectlombok:lombok'
+
+    // test
+    testImplementation 'io.rest-assured:rest-assured:3.3.0'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // compile
+    compileOnly('org.projectlombok:lombok:1.18.20')
+    annotationProcessor('org.projectlombok:lombok:1.18.20')
+
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    implementation group: 'com.google.guava', name: 'guava', version: 'r05'
+
+    implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.0.1.RELEASE'
+    implementation 'org.apache.commons:commons-lang3:3.11'
+
+    implementation 'org.yaml:snakeyaml:1.28'
+    testImplementation 'io.rest-assured:xml-path:4.2.0'
+
+    implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.2'
+    implementation group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.2'
+    runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-jackson', version: '0.11.2'
+
+    implementation 'com.amazonaws:aws-java-sdk-ses:1.12.3'
+    implementation 'org.springframework.boot:spring-boot-starter-mail:2.2.1.RELEASE'
+    // https://mvnrepository.com/artifact/commons-io/commons-io
+    implementation group: 'commons-io', name: 'commons-io', version: '2.6'
+
+    implementation 'com.atlassian.commonmark:commonmark:0.13.0'
+}
+bootJar {
+    mainClass = 'com.woori_silok.SpringbootBasicApplication'
+}
+
+test {
+    useJUnitPlatform()
+    exclude '**/*'
+
+}
