@@ -133,4 +133,3 @@ $ java -jar springboot-basic-0.0.1-SNAPSHOT.jar
   - 회의록 작성
   - 회의록 공유
   - 파일 업로드 / 다운로드
-- 황민주
